@@ -46,29 +46,9 @@ touch "$log"
 
 # Clone the repository and log the output
 if [[ ! -d "$HOME/dotfiles" ]] then
-    if [[ ! -d "$parent_dir/.cache/dotfiles" ]]; then
-        git clone --depth=1 https://github.com/kiljune/dotfiles.git "$parent_dir/.cache/dotfiles" 2>&1 | tee -a "$log" &> /dev/null
-    fi
-fi
-sleep 1
-
-# if repo clonned successfully, then setting up the config
-if [[ -d "$parent_dir/.cache/dotfiles" ]]; then
-  cd "$parent_dir/.cache/dotfiles" || { msg err "Could not changed directory to $parent_dir/.cache/dotfiles" 2>&1 | tee -a >(sed 's/\x1B\[[0-9;]*[JKmsu]//g' >> "$log"); exit 1; }
-
-  mkdir -p $HOME/dotfiles || { msg err "Could not make directory to $HOME/dotfiles" 2>&1 | tee -a >(sed 's/\x1B\[[0-9;]*[JKmsu]//g' >> "$log"); exit 1;}
-  sleep 0.3
-
-  cp -r * $HOME/dotfiles || { msg err "Could not copy directory to $HOME/dotfiles" 2>&1 | tee -a >(sed 's/\x1B\[[0-9;]*[JKmsu]//g' >> "$log"); exit 1;}
-fi
-
-if [[ -d "$HOME/dotfiles" ]]; then
-  msg dn "Dotfiles setup was successful..." 2>&1 | tee -a >(sed 's/\x1B\[[0-9;]*[JKmsu]//g' >> "$log")
+  git clone https://github.com/kiljune/dotfiles.git "$HOME/dotfiles" 2>&1 | tee -a "$log" &> /dev/null
   cd $HOME/dotfiles
   stow . || { msg err "Could not stow $HOME/dotfiles" 2>&1 | tee -a >(sed 's/\x1B\[[0-9;]*[JKmsu]//g' >> "$log"); exit 1;}
-else
-  msg err "Could not setup dotfiles.." 2>&1 | tee -a >(sed 's/\x1B\[[0-9;]*[JKmsu]//g' >> "$log")
-  exit 1
 fi
 
 sleep 1 && clear
