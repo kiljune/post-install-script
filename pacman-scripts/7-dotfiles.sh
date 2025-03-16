@@ -47,8 +47,7 @@ touch "$log"
 # Clone the repository and log the output
 if [[ ! -d "$HOME/dotfiles" ]] then
     if [[ ! -d "$parent_dir/.cache/dotfiles" ]]; then
-        #git clone --depth=1 https://github.com/shell-ninja/hyprconf.git "$parent_dir/.cache/dotfiles" 2>&1 | tee -a "$log" &> /dev/null
-        echo "TODO: git clone my dotfiles"
+        git clone --depth=1 https://github.com/kiljune/dotfiles.git "$parent_dir/.cache/dotfiles" 2>&1 | tee -a "$log" &> /dev/null
     fi
 fi
 sleep 1
@@ -60,10 +59,10 @@ if [[ -d "$parent_dir/.cache/dotfiles" ]]; then
   mkdir -p $HOME/dotfiles || { msg err "Could not make directory to $HOME/dotfiles" 2>&1 | tee -a >(sed 's/\x1B\[[0-9;]*[JKmsu]//g' >> "$log"); exit 1;}
   sleep 0.3
 
-  cp * $HOME/dotfiles || { msg err "Could not copy directory to $HOME/dotfiles" 2>&1 | tee -a >(sed 's/\x1B\[[0-9;]*[JKmsu]//g' >> "$log"); exit 1;}
+  cp -r * $HOME/dotfiles || { msg err "Could not copy directory to $HOME/dotfiles" 2>&1 | tee -a >(sed 's/\x1B\[[0-9;]*[JKmsu]//g' >> "$log"); exit 1;}
 fi
 
-if [[ -f "$HOME/dotfiles/.stowrc" ]]; then
+if [[ -d "$HOME/dotfiles" ]]; then
   msg dn "Dotfiles setup was successful..." 2>&1 | tee -a >(sed 's/\x1B\[[0-9;]*[JKmsu]//g' >> "$log")
   cd $HOME/dotfiles
   stow . || { msg err "Could not stow $HOME/dotfiles" 2>&1 | tee -a >(sed 's/\x1B\[[0-9;]*[JKmsu]//g' >> "$log"); exit 1;}
