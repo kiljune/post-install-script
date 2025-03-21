@@ -106,5 +106,8 @@ for packages in "${to_install[@]}"; do
     echo "[ ERROR ] - Sorry, could not install '$packages'" 2>&1 | tee -a "$log" &> /dev/null
   fi
 done
+git config --global user.name "Kiljune Choi"
+git config --global user.email kiljune@gmail.com
+git config --global init.defaultBranch main
 
 sleep 1 && clear
