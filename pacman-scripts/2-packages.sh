@@ -109,5 +109,8 @@ for packages in "${to_install[@]}"; do
 done
 
 sudo systemctl edit --full grub-btrfsd
+git config --global user.name "Kiljune Choi"
+git config --global user.email kiljune@gmail.com
+git config --global init.defaultBranch main
 
 sleep 1 && clear
