@@ -64,6 +64,7 @@ echo "XMODIFIERS=@im=ibus" 2>&1 | sudo tee -a $etc_env &> /dev/null
 chsh -s "$(which zsh)"
 sudo systemctl enable --now ufw
 sudo ufw enable
+sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 sudo virsh net-autostart default
 
 sleep 1 && clear
