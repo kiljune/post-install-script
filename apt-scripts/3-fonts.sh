@@ -65,8 +65,8 @@ fi
 
 # installable fonts will be here
 fonts=(
-    fonts-font-awesome
     fonts-noto
+    fonts-font-awesome
     fonts-jetbrains-mono
     fonts-firacode
 )
