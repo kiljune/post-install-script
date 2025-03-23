@@ -67,8 +67,8 @@ fi
 fonts=(
     fonts-noto
     fonts-font-awesome
-    fonts-jetbrains-mono
-    fonts-firacode
+    #fonts-jetbrains-mono   instead download from nerd font website
+    #fonts-firacode
 )
 
 # checking already installed packages 
