@@ -46,7 +46,7 @@ touch "$log"
 
 # Clone the repository and log the output
 if [[ ! -d "$HOME/dotfiles" ]] then
-  git clone https://github.com/kiljune/dotfiles.git "$HOME/dotfiles" 2>&1 | tee -a "$log" &> /dev/null
+  git clone git@github.com:kiljune/dotfiles.git "$HOME/dotfiles" 2>&1 | tee -a "$log" &> /dev/null
   cd $HOME/dotfiles
   stow . || { msg err "Could not stow $HOME/dotfiles" 2>&1 | tee -a >(sed 's/\x1B\[[0-9;]*[JKmsu]//g' >> "$log"); exit 1;}
 fi

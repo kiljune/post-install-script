@@ -65,6 +65,7 @@ main_packages=(
   rclone
   bat
   zsh
+  fish
   neovim
   btop
   nvtop
@@ -73,17 +74,18 @@ main_packages=(
   stow
   zram-generator
   flatpak
-  flatseal
+  #flatseal
   tldr
   lsd
   7zip
   unzip
   fastfetch
   ffmpeg
-  ibus-hangul
+  #ibus-hangul
+  kime
   cronie
   timeshift
-  grub-btrfs
+  #grub-btrfs
   figlet
   cava
   caffeine
@@ -108,9 +110,9 @@ for packages in "${to_install[@]}"; do
   fi
 done
 
-sudo systemctl edit --full grub-btrfsd
-git config --global user.name "Kiljune Choi"
-git config --global user.email kiljune@gmail.com
-git config --global init.defaultBranch main
+#sudo systemctl edit --full grub-btrfsd
+#git config --global user.name "Kiljune Choi"
+#git config --global user.email kiljune@gmail.com
+#git config --global init.defaultBranch main
 
 sleep 1 && clear
