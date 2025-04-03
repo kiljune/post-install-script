@@ -14,13 +14,13 @@ orange="\e[1;38;5;214m"
 end="\e[1;0m"
 
 display_text() {
-    gum style \
-        --border rounded \
-        --align center \
-        --width 70 \
-        --margin "1" \
-        --padding "1" \
-'
+  gum style \
+    --border rounded \
+    --align center \
+    --width 70 \
+    --margin "1" \
+    --padding "1" \
+    '
     _____             __
    / __(_)___  ____ _/ /
   / /_/ / __ \/ __ `/ / 
@@ -47,19 +47,19 @@ log_dir="$parent_dir/Logs"
 log="$log_dir/8-final_checkup-$(date +%d-%m-%y).log"
 
 if [[ ! -f "$log" ]]; then
-    mkdir -p "$log_dir"
-    touch "$log"
+  mkdir -p "$log_dir"
+  touch "$log"
 fi
 
 etc_env="/etc/environment"
 sudo mv $etc_env $HOME/environment.bak
 sudo touch $etc_env
-echo "VISUAL=nvim" 2>&1 | sudo tee -a $etc_env &> /dev/null
-echo "EDITOR=nvim" 2>&1 | sudo tee -a $etc_env &> /dev/null
-echo "" 2>&1 | sudo tee -a $etc_env &> /dev/null
-echo "GTK_IM_MODULE=ibus" 2>&1 | sudo tee -a $etc_env &> /dev/null
-echo "QT_IM_MODULE=ibus" 2>&1 | sudo tee -a $etc_env &> /dev/null
-echo "XMODIFIERS=@im=ibus" 2>&1 | sudo tee -a $etc_env &> /dev/null
+echo "VISUAL=nvim" 2>&1 | sudo tee -a $etc_env &>/dev/null
+echo "EDITOR=nvim" 2>&1 | sudo tee -a $etc_env &>/dev/null
+echo "" 2>&1 | sudo tee -a $etc_env &>/dev/null
+echo "GTK_IM_MODULE=kime" 2>&1 | sudo tee -a $etc_env &>/dev/null
+echo "QT_IM_MODULE=kime" 2>&1 | sudo tee -a $etc_env &>/dev/null
+echo "XMODIFIERS=@im=kime" 2>&1 | sudo tee -a $etc_env &>/dev/null
 
 chsh -s "$(which zsh)"
 sudo systemctl enable --now ufw
