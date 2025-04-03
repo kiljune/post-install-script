@@ -14,13 +14,13 @@ orange="\e[1;38;5;214m"
 end="\e[1;0m"
 
 display_text() {
-    gum style \
-        --border rounded \
-        --align center \
-        --width 70 \
-        --margin "1" \
-        --padding "1" \
-'
+  gum style \
+    --border rounded \
+    --align center \
+    --width 70 \
+    --margin "1" \
+    --padding "1" \
+    '
    ____          __    
   / __/__  ___  / /____
  / _// _ \/ _ \/ __(_-<
@@ -31,7 +31,6 @@ display_text() {
 
 clear && display_text
 printf " \n \n"
-
 
 ###------ Startup ------###
 
@@ -51,32 +50,32 @@ log_dir="$parent_dir/Logs"
 log="$log_dir/3-fonts-$(date +%d-%m-%y).log"
 
 if [[ -f "$log" ]]; then
-    errors=$(grep "ERROR" "$log")
-    last_installed=$(grep "fonts-firacode" "$log" | awk {'print $2'})
-    if [[ -z "$errors" && "$last_installed" == "DONE" ]]; then
-        msg skp "Skipping this script. No need to run it again..."
-        sleep 1
-        exit 0
-    fi
+  errors=$(grep "ERROR" "$log")
+  last_installed=$(grep "fonts-firacode" "$log" | awk {'print $2'})
+  if [[ -z "$errors" && "$last_installed" == "DONE" ]]; then
+    msg skp "Skipping this script. No need to run it again..."
+    sleep 1
+    exit 0
+  fi
 else
-    mkdir -p "$log_dir"
-    touch "$log"
+  mkdir -p "$log_dir"
+  touch "$log"
 fi
 
 # installable fonts will be here
 fonts=(
-    noto-fonts
-    noto-fonts-cjk
-    noto-fonts-emoji
-    noto-fonts-extra
-    ttf-jetbrains-mono
-    ttf-jetbrains-mono-nerd
-    ttf-firacode-nerd
+  noto-fonts
+  noto-fonts-cjk
+  noto-fonts-emoji
+  noto-fonts-extra
+  #ttf-jetbrains-mono
+  #ttf-jetbrains-mono-nerd
+  #ttf-firacode-nerd
 )
 
-# checking already installed packages 
+# checking already installed packages
 for skipable in "${fonts[@]}"; do
-    skip_installed "$skipable"
+  skip_installed "$skipable"
 done
 
 to_install=($(printf "%s\n" "${fonts[@]}" | grep -vxFf "$installed_cache"))
@@ -87,9 +86,7 @@ for font in "${to_install[@]}"; do
   install_package "$font"
 done
 
-
 # Update font cache and log the output
-sudo fc-cache -fv &> /dev/null
-
+sudo fc-cache -fv &>/dev/null
 
 sleep 1 && clear
