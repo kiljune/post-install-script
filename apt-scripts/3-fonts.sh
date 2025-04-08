@@ -88,5 +88,4 @@ done
 # Update font cache and log the output
 sudo fc-cache -fv &> /dev/null
 
-
-sleep 1 && clear
+sleep 1

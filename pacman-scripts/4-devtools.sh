@@ -99,4 +99,4 @@ done
 
 rustup default stable
 
-sleep 1 && clear
+sleep 1

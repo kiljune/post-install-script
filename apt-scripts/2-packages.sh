@@ -82,7 +82,8 @@ main_packages=(
   unzip
   fastfetch
   ffmpeg
-  ibus-hangul
+  #ibus-hangul
+  kime
   timeshift
   figlet
   cava
@@ -111,4 +112,4 @@ done
 #git config --global user.email kiljune@gmail.com
 #git config --global init.defaultBranch main
 
-sleep 1 && clear
+sleep 1

@@ -72,4 +72,4 @@ sudo virsh net-autostart default
 sudo apt autoremove
 sudo apt clean
 
-sleep 1 && clear
+sleep 1

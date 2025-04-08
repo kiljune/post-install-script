@@ -98,5 +98,4 @@ for tools in "${to_install[@]}"; do
     fi
 done
 
-
-sleep 1 && clear
+sleep 1

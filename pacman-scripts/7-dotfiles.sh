@@ -51,4 +51,4 @@ if [[ ! -d "$HOME/dotfiles" ]] then
   stow . || { msg err "Could not stow $HOME/dotfiles" 2>&1 | tee -a >(sed 's/\x1B\[[0-9;]*[JKmsu]//g' >> "$log"); exit 1;}
 fi
 
-sleep 1 && clear
+sleep 1
