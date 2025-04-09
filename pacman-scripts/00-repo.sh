@@ -67,7 +67,7 @@ _aur=$(cat "$parent_dir/.cache/aur")
 msg act "Installing $_aur"
 
 sudo rm -rf /var/lib/pacman/db.lck &> /dev/null
-git clone --depth=1 https://aur.archlinux.org/${_aur}-bin.git "$parent_dir/.cache/${_aur}" &> /dev/null
+git clone --depth=1 https://aur.archlinux.org/${_aur}.git "$parent_dir/.cache/${_aur}" &> /dev/null
 cd "$parent_dir/.cache/${_aur}" || exit 1
 makepkg -sic --noconfirm
 sleep 1
