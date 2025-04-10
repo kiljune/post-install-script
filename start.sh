@@ -159,6 +159,8 @@ fi
 
 execute_script 2-packages.sh
 
+execute_script 2.1-hyprpackages.sh
+
 execute_script 3-fonts.sh
 
 execute_script 4-devtools.sh
