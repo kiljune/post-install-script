@@ -82,7 +82,7 @@ main_packages=(
   fastfetch
   ffmpeg
   #ibus-hangul
-  kime
+  kime-bin
   cronie
   timeshift
   #grub-btrfs
