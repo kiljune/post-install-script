@@ -82,8 +82,8 @@ main_packages=(
   unzip
   fastfetch
   ffmpeg
-  #ibus-hangul
-  kime
+  ibus-hangul
+  #kime
   timeshift
   figlet
   cava
