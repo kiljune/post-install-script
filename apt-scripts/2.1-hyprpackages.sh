@@ -77,7 +77,7 @@ main_packages=(
   slurp
   cliphist
   nwg-look
-  nwg-display
+  nwg-displays
   nwg-dock-hyprland
   qt6ct
   waybar
@@ -85,20 +85,17 @@ main_packages=(
   polkit-gnome
   pavucontrol
   breeze
-  swaync
+  sway-notification-center
   gvfs
   wlogout
   hyprshade
   waypaper
   grimblast-git
-  otf-font-awesome
-  ttf-fira-sans
-  ttf-fira-code
-  ttf-firacode-nerd
-  ttf-dejavu
+  fonts-font-awesome
+  fonts-firacode
+  fonts-dejavu
   loupe
   power-profiles-daemon
-  librewolf
 )
 
 # checking already installed packages 
