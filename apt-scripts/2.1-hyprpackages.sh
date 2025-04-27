@@ -82,7 +82,6 @@ main_packages=(
   qt6ct
   waybar
   rofi-wayland
-  polkit-gnome
   pavucontrol
   breeze
   sway-notification-center
@@ -92,10 +91,8 @@ main_packages=(
   waypaper
   grimblast-git
   fonts-font-awesome
-  fonts-firacode
   fonts-dejavu
   loupe
-  power-profiles-daemon
 )
 
 # checking already installed packages 

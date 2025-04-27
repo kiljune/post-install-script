@@ -84,10 +84,11 @@ main_packages=(
   ffmpeg
   ibus-hangul
   #kime
-  timeshift
+  #timeshift
   figlet
   cava
   caffeine
+  lazygit
 )
 
 # checking already installed packages 

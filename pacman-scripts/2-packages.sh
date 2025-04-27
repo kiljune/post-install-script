@@ -89,6 +89,7 @@ main_packages=(
   figlet
   cava
   caffeine
+  lazygit
 )
 
 # checking already installed packages 

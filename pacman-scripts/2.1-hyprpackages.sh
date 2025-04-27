@@ -99,7 +99,6 @@ main_packages=(
   ttf-dejavu
   checkupdates-with-aur
   loupe
-  power-profiles-daemon
   librewolf
 )
 
