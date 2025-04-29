@@ -77,7 +77,7 @@ main_packages=(
   slurp
   cliphist
   nwg-look
-  nwg-display
+  nwg-displays
   nwg-dock-hyprland
   qt6ct
   waybar
