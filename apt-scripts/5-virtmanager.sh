@@ -98,4 +98,6 @@ for tools in "${to_install[@]}"; do
     fi
 done
 
+sudo virsh net-autostart default
+
 sleep 1

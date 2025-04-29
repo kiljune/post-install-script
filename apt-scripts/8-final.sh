@@ -68,7 +68,6 @@ fi
 sudo systemctl enable --now ufw
 sudo ufw enable
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-sudo virsh net-autostart default
 sudo apt autoremove
 sudo apt clean
 
