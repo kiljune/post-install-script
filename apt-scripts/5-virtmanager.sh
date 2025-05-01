@@ -76,7 +76,7 @@ virtmanager=(
     qemu-utils
     guestfs-tools
     libosinfo-bin
-    tuned
+    tuned-ppd
 )
 
 # checking already installed packages 
