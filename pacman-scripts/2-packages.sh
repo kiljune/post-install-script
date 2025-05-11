@@ -75,7 +75,7 @@ main_packages=(
   zram-generator
   flatpak
   #flatseal
-  tldr
+  tealdeer
   lsd
   7zip
   unzip
