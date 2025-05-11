@@ -76,7 +76,7 @@ main_packages=(
   flatpak
   #flatseal
   gnome-software-plugin-flatpak
-  tldr
+  tealdeer
   lsd
   7zip
   unzip
