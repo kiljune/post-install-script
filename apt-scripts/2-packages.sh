@@ -87,7 +87,6 @@ main_packages=(
   #timeshift
   figlet
   cava
-  caffeine
   lazygit
 )
 

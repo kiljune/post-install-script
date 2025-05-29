@@ -69,7 +69,7 @@ fi
 # installable themes will be here
 themes=(
     bibata-cursor-theme
-    arc-theme
+    breeze-cursor-theme
     papirus-icon-theme
 )
 
