@@ -66,20 +66,18 @@ fi
 
 # installable fonts will be here
 virtmanager=(
-    qemu-system-x86
+    qemu-system
     libvirt-daemon-system
     virtinst
     virt-manager
     virt-viewer
-    ovmf
     swtpm
-    qemu-utils
     guestfs-tools
     libosinfo-bin
     tuned-ppd
 )
 
-# checking already installed packages 
+# checking already installed packages
 for skipable in "${virtmanager[@]}"; do
     skip_installed "$skipable"
 done
