@@ -66,6 +66,7 @@ main_packages=(
   bat
   zsh
   fish
+	starship
   neovim
   btop
   nvtop
