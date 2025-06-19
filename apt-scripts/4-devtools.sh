@@ -66,13 +66,13 @@ fi
 
 # installable fonts will be here
 devtools=(
-	  build-essential
+    build-essential
     gcc
     gdb
     make
     cmake
-		cmake-extras
-		cmake-format
+    cmake-extras
+    cmake-format
     clang
     llvm
     lldb
