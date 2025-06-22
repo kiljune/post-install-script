@@ -66,7 +66,7 @@ fi
 
 # installable fonts will be here
 virtmanager=(
-    qemu-base
+    qemu-full
     libvirt
     virt-install
     virt-manager

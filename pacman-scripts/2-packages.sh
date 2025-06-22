@@ -82,8 +82,8 @@ main_packages=(
   unzip
   fastfetch
   ffmpeg
-  #ibus-hangul
-  kime-bin
+  ibus-hangul
+  #kime-bin
   cronie
   timeshift
   #grub-btrfs
