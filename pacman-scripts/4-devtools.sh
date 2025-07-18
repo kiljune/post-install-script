@@ -70,7 +70,10 @@ devtools=(
     gcc
     gdb
     make
+    ninja
     cmake
+    cmake-extras
+    extra-cmake-modules
     clang
     llvm
     lldb
